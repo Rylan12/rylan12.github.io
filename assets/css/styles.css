@@ -39,6 +39,7 @@
   font-variant: common-ligatures;
   font-kerning: normal;
   font-feature-settings: "kern";
+  color: #1E1E1E;
 }
 a {
   text-decoration: none;
