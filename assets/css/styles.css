@@ -1,0 +1,133 @@
+/* Charter font family setup */
+@font-face {
+  font-family: Charter;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('assets/fonts/charter/charter_regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: Charter;
+  font-style: italic;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('assets/fonts/charter/charter_italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  src: url('assets/fonts/charter/charter_bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: Charter;
+  font-style: italic;
+  font-weight: bold;
+  font-stretch: normal;
+  src: url('assets/fonts/charter/charter_bold_italic.woff2') format('woff2');
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Charter, Helvetica, serif;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  border-bottom: black 1px dotted;
+}
+a:hover {
+  color: #EE6644;
+  transition: 0.16s;
+  border-color: #EE6644;
+}
+h2 {
+  margin-bottom: 18px;
+}
+p {
+  line-height: 1.35;
+  hyphens: auto;
+  margin-bottom: 18px;
+}
+body {
+  background: #FCFCFC;
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header and nav bar */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 16px 8px;
+  border-bottom: black 1px solid;
+  margin-bottom: 24px;
+}
+.site-title {
+  font-size: 26px;
+  font-weight: bold;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+nav ul li {
+  display: inline;
+  margin-right: 48px;
+}
+nav ul li:last-of-type {
+  margin-right: 0;
+}
+header a {
+  border: none;
+}
+nav a.current-page {
+  color: #EE6644;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  padding: 0 4px;
+  gap: 24px;
+}
+.bio {
+  max-width: 100%;
+}
+.profile-photo {
+  border-radius: 50%;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 16px 4px;
+}
+footer .socials li {
+  display: inline;
+  margin-right: 16px;
+}
+footer .socials li:last-of-type {
+  margin-right: 0;
+}
+footer p {
+  margin-bottom: 0;
+}
