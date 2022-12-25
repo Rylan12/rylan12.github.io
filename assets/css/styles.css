@@ -35,6 +35,10 @@
   box-sizing: border-box;
   font-family: Charter, Helvetica, serif;
   font-size: 20px;
+  text-rendering: optimizeLegibility;
+  font-variant: common-ligatures;
+  font-kerning: normal;
+  font-feature-settings: "kern";
 }
 a {
   text-decoration: none;
