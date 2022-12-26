@@ -41,9 +41,9 @@
   font-feature-settings: "kern";
   color: #1E1E1E;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 453px) {
   * {
-    font-size: 3.1667vw;
+    font-size: 4.07vw;
   }
 }
 a {
@@ -76,6 +76,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.no-hyphenation {
+  hyphens: none;
 }
 
 /* Header and nav bar */
