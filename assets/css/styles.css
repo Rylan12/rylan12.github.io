@@ -34,12 +34,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Charter, Helvetica, serif;
-  font-size: 20px;
+  font-size: 19px;
   text-rendering: optimizeLegibility;
   font-variant: common-ligatures;
   font-kerning: normal;
   font-feature-settings: "kern";
   color: #1E1E1E;
+}
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 3.1667vw;
+  }
 }
 a {
   text-decoration: none;
@@ -83,6 +88,11 @@ header {
   border-bottom: black 1px solid;
   margin-bottom: 24px;
 }
+@media screen and (max-width: 768px) {
+  header {
+    padding: 16px 16px;
+  }
+}
 .site-title {
   font-size: 26px;
   font-weight: bold;
@@ -105,19 +115,35 @@ nav a.current-page {
 
 /* Content */
 .content {
-  flex: 1;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 4px;
-  gap: 24px;
+  padding: 0 8px;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 3fr;
+  grid-gap: 24px;
+  margin-bottom: auto;
 }
-.bio {
-  max-width: 568px;
+.content-left {
+  display: grid;
+  justify-items: right;
 }
-.profile-photo {
-  border-radius: 50%;
+.content-right {
+  display: grid;
+  justify-items: left;
+  grid-template-columns: minmax(0, 568px);
+}
+/* Switch to a vertical layout */
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 0 16px;
+    grid-template-columns: 1fr;
+  }
+  .content-left {
+    justify-items: center;
+  }
+  .content-right {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Footer */
@@ -127,7 +153,12 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap-reverse;
-  padding: 16px 4px;
+  padding: 16px 8px;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 16px 16px;
+  }
 }
 footer .socials li {
   display: inline;
@@ -138,4 +169,11 @@ footer .socials li:last-of-type {
 }
 footer p {
   margin-bottom: 0;
+}
+
+/* Page-specific items */
+.profile-photo {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
 }
